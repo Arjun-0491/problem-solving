@@ -1,36 +1,33 @@
+// Write a program in C to rearrange an array in such an order that– smallest, largest,
+//2nd smallest, 2nd largest and on
 
-const aray = [10,78,67,8,5,23,7,5,1,0]
+let array=[43,3,5,5,77,8,77,5,13]
 
-for(let i=0;i<aray.length; i++){
-  for(let j=0; j<aray.length-i; j++){ 
+for(let i=0; i<array.length; i++){
 
-    if (aray[j]>aray[j+1]) {
-let temp=aray[j]
-aray[j]=aray[j+1]
-aray[j+1 ]=temp
+    for(let j=i+1; j<array.length; j++){
+       if ( array[i]>array[j]) {
+        
+         let temp=array[i]
+         array[i]=array[j]
+         array[j]=temp
+       }
+
     }
-  }
 }
+ console.log(array)
+let ar=[]
+let a=array.length-1
+let b=0
+ for(let i=0; i<=array.length; i++){
 
-console.log(aray)
-
-
-// let less =[]
-// let great = []
-// let p = aray[0]
-
-// for(let i = 0 ; i<aray.length; i++){
-//       if(aray[i]>p){
-//     great.push(aray[i])
-//   }else{
-//     less.push(aray[i])
-//   }
-//   }
- 
-// console.log(less)
-// console.log(great);
-
-// let final = great.concat(less)
-
-//console.log(final);
+    if (i%2==1) {
+        ar[i]=array[a]
+        a--
+    }else  {
+        ar[i]=array[b]
+        b++
+    }
+ }
+ console.log(ar)
 
