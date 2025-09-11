@@ -7,10 +7,14 @@ b=0
 for(let i=0; i<array.length; i++){
 
     if(array[i]>array[a]){
+
         a=i
-    }else if (array[i]<array[b]) {
+    } 
+     if (array[i]<array[b]) {
+    
         b=i
     }
 }
 console.log("maximum",array[a])
-console.log("maximum",array[b])
+console.log("minimum",array[b])
+
